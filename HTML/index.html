@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monitoreo de Lluvia - CVC</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+  <!-- LOGIN -->
+  <section id="login" class="tarjeta">
+    <h1>Monitoreo de Lluvia</h1>
+    <input id="user" placeholder="Usuario">
+    <input id="pass" type="password" placeholder="Contraseña">
+    <button onclick="entrar()">Ingresar</button>
+    <p id="errLogin" class="error"></p>
+  </section>
+
+  <!-- PANEL PRINCIPAL -->
+  <main id="panel" class="oculto">
+    <div class="tarjeta">
+      <h2>Registro de precipitación (estándar Cali: 14 mm)</h2>
+      <label>Dirección de la zona</label>
+      <input id="direccion" placeholder="Ej: Calle 5 con Carrera 30">
+      <label>Hora de inicio</label>
+      <input id="inicio" type="time">
+      <label>Hora de fin</label>
+      <input id="fin" type="time">
+      <label>Precipitación (mm)</label>
+      <input id="mm" type="number" min="0" step="0.1">
+      <label>Usuario que registra</label>
+      <input id="quien" placeholder="Tu nombre">
+      <button id="btnReg" onclick="registrar()">Registrar</button>
+      <button class="gris" onclick="cerrarSesion()">Salir</button>
+
+      <div id="reloj" class="oculto"><div class="aguja">🕐</div><p>Procesando dato...</p></div>
+      <div id="resultado"></div>
+    </div>
+
+    <div class="tarjeta">
+      <h2>Foto de la zona afectada</h2>
+      <input id="foto" type="file" accept="image/*" capture="environment" onchange="verFoto(this)">
+      <img id="vista" class="oculto" alt="Foto de la zona">
+    </div>
+
+    <div class="tarjeta">
+      <h2>Gráfica de registros (mm)</h2>
+      <div id="grafica"></div>
+    </div>
+  </main>
+  <script src="../JS/script.js"></script>
+</body>
+</html>

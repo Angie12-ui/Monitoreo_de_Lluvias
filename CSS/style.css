@@ -1,0 +1,20 @@
+body{font-family:Arial,sans-serif;background:#e8f1f8;margin:0;padding:20px;color:#1b2a38}
+.tarjeta{background:#fff;max-width:480px;margin:15px auto;padding:20px;border-radius:12px;box-shadow:0 2px 8px #0002}
+h1,h2{text-align:center;color:#1565c0}
+h2{font-size:18px}
+input{width:100%;padding:9px;margin:4px 0 10px;box-sizing:border-box;border:1px solid #aab;border-radius:6px}
+button{background:#1565c0;color:#fff;border:0;padding:10px 16px;border-radius:6px;cursor:pointer;margin-top:6px}
+button:disabled{opacity:.5}
+.gris{background:#777}
+.oculto{display:none}
+.error{color:#c62828;text-align:center}
+#reloj{text-align:center}
+.aguja{font-size:48px;display:inline-block;animation:girar 1s linear infinite}
+@keyframes girar{to{transform:rotate(360deg)}}
+#resultado{margin-top:12px;font-weight:bold}
+.sube{color:#c62828}.baja{color:#2e7d32}
+#vista{width:100%;margin-top:10px;border-radius:8px}
+#grafica{display:flex;align-items:flex-end;gap:8px;height:200px;border-bottom:2px solid #333;position:relative;padding-top:10px}
+.barra{flex:1;background:#42a5f5;color:#000;font-size:11px;text-align:center;min-width:20px;border-radius:4px 4px 0 0}
+.barra.alta{background:#ef5350}
+.linea{position:absolute;left:0;right:0;border-top:2px dashed #2e7d32}
